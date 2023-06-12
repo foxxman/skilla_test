@@ -1,0 +1,146 @@
+@import "variables.scss";
+
+.Balance {
+  background: #ffffff;
+  border-radius: 48px;
+  padding: 8px 12px;
+  display: flex;
+  white-space: nowrap;
+  p {
+    margin-right: 10px;
+    color: #899cb1;
+    font-weight: 400;
+    font-size: 14px;
+    span {
+      color: #122945;
+      font-weight: 600;
+    }
+  }
+
+  svg path {
+    fill-opacity: 1;
+    fill: $color-primary;
+  }
+}
+
+.DateFilter {
+  display: flex;
+  align-items: center;
+  margin-left: 48px;
+  position: relative;
+  &Arrow {
+    transition: all 0.3s linear;
+    &Left {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    &Right {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &State {
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    margin: 0 21px 0 21px;
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+.Filter {
+  display: flex;
+  align-items: center;
+  // margin-right: 32px;
+  position: relative;
+
+  &State {
+    display: flex;
+    align-items: center;
+    color: $color-secondary;
+    margin-right: 8px;
+  }
+  &Arrow {
+    transition: all 0.3s ease-in;
+  }
+  &Open {
+    .FilterArrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.FilterList {
+  background: #ffffff;
+  //   border: 1px solid #eaf0fa;
+  box-shadow: 4px 16px 50px rgba(129, 135, 163, 0.24);
+  border-radius: 4px;
+  list-style: none;
+  min-width: 204px;
+  border: none;
+
+  // position
+  position: absolute;
+  z-index: 998;
+  top: 110%;
+  right: 0;
+  margin: 0;
+  padding: 0;
+
+  //  animation
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  overflow: hidden;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+
+  &.FilterListActive {
+    max-height: 90vh;
+  }
+
+  &Item {
+    width: 100%;
+    padding: 0;
+    border: none;
+    &Self {
+      background-color: #fff;
+      padding: 6px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 14px;
+      line-height: 28px;
+      color: #899cb1;
+      transition: all 0.5s ease;
+      opacity: 1;
+
+      //   &:hover {
+      //     background: #002efb43;
+      //     color: #122945;
+      //   }
+    }
+    button {
+      background-color: #fff;
+      padding: 6px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 14px;
+      line-height: 28px;
+      color: #899cb1;
+      transition: all 0.5s ease;
+      opacity: 1;
+
+      &:hover {
+        background: #002efb43;
+        color: #122945;
+      }
+    }
+  }
+}

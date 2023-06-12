@@ -1,0 +1,75 @@
+@import "normalize.css";
+@import "sanitize.css";
+
+@font-face {
+	font-family: 'SF Pro Display'; 
+	src: url(./assets/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF); 
+}
+
+*,
+*::before,
+*::after {
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: black;
+  overflow-x: hidden;
+  background-color: #E5E5E5 !important;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ========================= */
+.d-flex{
+  display: flex;
+}
+.justify-between{
+  justify-content: space-between;
+}
+.justify-end{
+  justify-content: end;
+}
+.justify-center{
+  justify-content: center;
+}
+.w-100{
+  width: 100%;
+}
+.ml-auto{
+  margin-left: auto;
+}
+.mr-auto{
+  margin-right: auto;
+}
+
+/* ==================== */
+
+div.rs-picker-default .rs-picker-toggle{
+  border: none !important;
+  outline: none !important;
+}
+
+.rs-picker-daterange-menu .rs-picker-toolbar-ranges{
+  display: none;
+}

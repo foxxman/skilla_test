@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.App {
+  display: flex;
+}
+
+.ContentBody {
+  width: 100%;
+}
+
+.Container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+.FiltersContainer {
+  margin-bottom: 7px;
+}
+
+.LogoutBtn {
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  & svg path {
+    transition: all 0.5s linear;
+  }
+  &:hover svg path {
+    fill: #002cfb;
+  }
+}
+
+.ActionBtn {
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  & svg path {
+    transition: all 0.5s linear;
+    fill: #adbfdf;
+  }
+  &:hover svg path {
+    fill: #002cfb;
+  }
+}

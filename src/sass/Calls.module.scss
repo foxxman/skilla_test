@@ -1,0 +1,125 @@
+@import "variables.scss";
+
+.Calls {
+  width: 100%;
+
+  padding: 24px 0 57px;
+  background-color: white;
+  box-shadow: 0px 4px 5px #e9edf3;
+  border-radius: 8px;
+
+  &Grid {
+    width: 100%;
+  }
+  &Row {
+    display: grid;
+    width: 100%;
+    min-height: 65px;
+    grid-template-columns: 1fr 1fr 2fr 3fr 7fr 6fr 6fr 9fr;
+    // cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    &:hover:not(.CallsRowHeader) {
+      background-color: #f3f4f6;
+    }
+
+    &Header {
+      height: auto;
+      min-height: unset;
+
+      margin-bottom: 20px;
+      cursor: auto;
+
+      .CallsRowCell {
+        height: auto;
+        border: none;
+      }
+    }
+    &Cell {
+      //   padding: 0 40px 0 12px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: all 0.1s ease;
+      border-top: 1px solid #eaf0fa;
+      width: 100%;
+      p {
+        width: 100%;
+      }
+
+      &:first-child {
+        padding-left: 12px;
+        border: none;
+      }
+      &:last-child {
+        justify-content: flex-end;
+        padding-right: 40px;
+        p {
+          width: 100%;
+          text-align: right;
+          align-items: end;
+        }
+      }
+
+      &Avatar {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.Record {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #eaf0fa;
+  border-radius: 48px;
+  max-width: 352px;
+  width: 100%;
+  padding: 12px 20px;
+  margin-left: 10px;
+
+  &Duration {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 145%;
+    color: #122945;
+  }
+  &Control {
+    background-color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 8px;
+      height: 10px;
+    }
+  }
+  &Line {
+    height: 4px;
+    background: #a8bad9;
+    border-radius: 50px;
+    width: 50%;
+    cursor: pointer;
+
+    &Progress {
+      height: 100%;
+      background-color: $color-primary;
+      width: 0%;
+      border-radius: 50px;
+      transition: all 0.1s linear;
+    }
+  }
+  &Time {
+    display: none;
+    position: absolute;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 145%;
+    color: #122945;
+  }
+}
